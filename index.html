@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanggal dan Waktu Real-Time</title>
+    <style>
+        #dateTimeContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #currentDate, #currentTime {
+            margin: 0 10px; /* Memberi jarak antara tanggal dan waktu */
+        }
+    </style>
+    <script>
+        function displayDateTime() {
+            var today = new Date();
+
+            // Array nama hari dalam bahasa Indonesia
+            var days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+
+            // Mendapatkan hari
+            var dayName = days[today.getDay()];
+            
+            // Mendapatkan tanggal
+            var day = today.getDate();
+            var month = today.getMonth() + 1; // Januari = 0
+            var year = today.getFullYear();
+            
+            // Mendapatkan waktu
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+
+            // Menyesuaikan ke zona waktu WIB (GMT+7)
+            var wibOffset = today.getTimezoneOffset() + (7 * 60); // Waktu lokal ke WIB
+            today.setMinutes(today.getMinutes() + wibOffset);
+            hours = today.getHours();
+
+            // Menambahkan 0 di depan angka jika hanya satu digit
+            day = day < 10 ? '0' + day : day;
+            month = month < 10 ? '0' + month : month;
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            // Format akhir hari, tanggal, dan waktu
+            var currentDate = dayName + ', ' + day + '/' + month + '/' + year;
+            var currentTime = hours + ':' + minutes + ':' + seconds + ' WIB';
+
+            // Menampilkan di halaman
+            document.getElementById("currentDate").innerHTML = currentDate;
+            document.getElementById("currentTime").innerHTML = currentTime;
+        }
+
+        // Memanggil fungsi setiap detik untuk memperbarui waktu
+        setInterval(displayDateTime, 1000);
+    </script>
+</head>
+    <title>Mencintai dalam Diam</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #8fc79a;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #2d8d79;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        article h2 {
+            color: #5e9387;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        article p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        article ul {
+            padding-left: 20px;
+        }
+        footer {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        footer p {
+            margin: 0;
+        }
+        
+                /* Menghilangkan border dari input dan textarea */
+        input, textarea {
+            border: none;
+            border-bottom: 1px solid #ccc; /* Bisa tambahkan garis bawah */
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box; /* Untuk menyesuaikan padding */
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none; /* Menghilangkan garis highlight saat focus */
+            border-bottom: 1px solid #555; /* Ubah warna garis bawah saat fokus */
+        }
+
+        /* Mengatur tampilan tombol kirim */
+        input[type="submit"] {
+            background-color: #4CAF50; /* Warna tombol */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Warna tombol saat di-hover */
+        }
+        
+</audio>
+    </style>
+</head>
+<body>
+				 
+     
+    
+<audio autoplay loop>
+    <source src="lofi sad.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.</audio>
+
+<header>
+    <h1>Mencintai dalam Diam</h1>
+    <p>By: Zeindarin</p>
+       <p align ="center">
+            <span id="currentDate"></span>
+            <span id="currentTime"></span>
+        </p>
+</header>
+
+<main>
+    <article>
+        <h2>Pembukaan</h2>
+        <p>Alhamdulillahirabbil Alamin wabihi nastainu ala umuridduna waddin asholatu assalamuala asrofil ambiyaiwalmursalin sayyidina Muhammad wa ala Alihi wa shohbihi wabarik wassalim ajmain amma badu.</p>
+        <p>Alhamdulillah segala puji Allah Tuhan semesta alam, marilah kita ucapkan nikmat syukur yang telah Allah berikan kepada kita baik itu rezeki, kesehatan, keselamatan juga waktu yang melimpah. Tidak lupa sholawatan serta salam semoga tetap tercurahkan kepada junjungan kita nabi besar Muhammad SAW, juga kepada para penerusnya hingga akhir zaman.</p>
+    </article>
+
+    <article>
+        <h2>Apa itu Cinta?</h2>
+        <p>Perasaan yang timbul dari mengenal karakteristik seseorang, baik secara formal maupun non-formal. Cinta tidak hanya tentang penampilan fisik, tetapi tentang menyukai semua yang ada pada diri seseorang.</p>
+    </article>
+
+    <article>
+        <h2>Unsur-Unsur Cinta</h2>
+        <ul>
+            <li>Menghargai perasaan tanpa keterpaksaan.</li>
+            <li>Perhatian dan tidak egois.</li>
+            <li>Cinta yang saling menguntungkan.</li>
+            <li>Mudah berdamai dan rela mengalah.</li>
+            <li>Keterbukaan dan kepercayaan.</li>
+            <li>Romantis, terutama bagi pasangan yang halal.</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Apakah boleh mencintai seseorang?</h2>
+        <p>Ya, cinta adalah perasaan yang bisa timbul secara alami. Selama cinta tersebut didasari niat yang baik dan dalam batasan syariat, itu adalah perasaan yang wajar.</p>
+        <p><em>"Katakanlah (Nabi Muhammad), Jika kamu mencintai Allah, ikutilah aku, niscaya Allah akan mencintaimu dan mengampuni dosa-dosamu. Allah Maha Pengampun lagi Maha Penyayang." (QS. Ali 'Imran: 31)</em></p>
+    </article>
+
+    <article>
+        <h2>Bagaimana cara mencintai yang baik menurut Islam?</h2>
+        <p>1. Niat yang tulus dan ikhlas. Niatkan cinta tersebut sebagai bagian dari ibadah kepada Allah.</p>
+        <p>2. Ikhlas: Pastikan bahwa perasaan cinta murni dan tidak ada niat untuk menyakiti atau memanfaatkan orang lain.</p>
+    </article>
+
+    <article>
+        <h2>Apa yang harus dijaga ketika mencintai seseorang?</h2>
+        <p>Menjaga pandangan dan menghindari fitnah. Menundukkan pandangan terhadap lawan jenis yang bukan mahram adalah penting dalam menjaga kesucian hati dan pikiran.</p>
+    </article>
+
+    <article>
+        <h2>Apa yang paling ampuh dalam mencintai seseorang?</h2>
+        <p>Berdoa kepada Allah untuk petunjuk. Berdoalah untuk diberikan jalan terbaik dalam perasaan cinta tersebut dan mintalah kekuatan untuk menjaga perasaan dengan cara yang diridhoi-Nya.</p>
+    </article>
+
+    <article>
+        <h2>Apa yang harus dijaga dalam pergaulan?</h2>
+        <p>Hindari pergaulan bebas dan jaga jarak dengan orang yang dicintai tanpa ikatan yang sah. Jaga agar interaksi tetap dalam batasan syariat Islam.</p>
+    </article>
+
+    <article>
+        <h2>Kapan kita bisa bersama?</h2>
+        <p>Menunggu waktu yang tepat. Bersabarlah dan percayalah bahwa Allah memiliki rencana terbaik. Jika memang jodoh, Allah akan memudahkan jalan untuk bersatu dalam ikatan pernikahan yang sah.</p>
+    </article>
+
+    <article>
+        <h2>Kesimpulan</h2>
+        <p>Mencintai dalam diam menurut Islam adalah bentuk cinta yang penuh kehati-hatian, kesabaran, dan ketaatan kepada Allah. Dengan menjaga pandangan, memperbanyak doa, meningkatkan kualitas diri, dan menghormati batasan syariat, seseorang bisa menjaga perasaan cintanya dengan cara yang diridhoi Allah.</p>
+    </article>
+    
+    <article>
+    				<h2>Referensi</h2>
+    				<p><il>1. Ihya Ulumuddin oleh imam Al-Ghazali</il>
+<il>2. Tafsir Ibnu Katsir oleh Ibnu Katsir </il>
+<il>3. Riyadhus Shalihin oleh imam Nawawi</il>
+<il>4. Al-Adab Al-Mufrad oleh Imam Al-Bukhari</il>
+<il>5. Fiqh Sunnah oleh Sayyid Sabiq</il>
+<il>6. Tazkiyatun Nafs oleh Ibnu Qayyim Al-Jawziyyah</il>
+<il>7. Kitab Nikah dalam Bulughul Maram oleh Ibnu Hajar Al-Asqalani</il>
+<il>8. Qurratul 'Uyun oleh Syaikh Muhammad bin Ahmad Al-Maliki</il>
+<il>9. Uqudul Lujain oleh Syaikh Nawawi Al-Bantani</il>
+</p>
+    </article>
+    
+    <article>
+        <!-- Bagian Baca Juga Artikel Lainnya -->
+    <div class="related-articles">
+        <h1>Baca juga artikel yang lainnya</h1>
+        <p><a href="https://zeindarin.github.io/Ujian-yang-dianggap-nikmat/" target="_blank">Ujian yang dianggap nikmat</a></p>
+    </div></article>
+    
+    <article>
+    <h2>Kolom Komentar, Kritik dan Saran</h2>
+
+    <form action="mailto:referralsofsciense@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required><br><br>
+        
+        <label for="comment">Komentar:</label><br>
+        <textarea id="comment" name="comment" rows="5" placeholder="Tulis komentar Anda di sini..." required></textarea><br><br>
+        
+        <input type="submit" value="Kirim Komentar">
+    </form></article>
+    
+        <article>
+        				<h1>Dukung Kami agar dalam membangun dakwah</h1><p align ="center"><a href="https://saweria.co/Zeindarin" target="_blank">kirim semangkuk bakso</a></p>
+    </article>
+</main>
+
+
+<footer>
+    <p>&copy; 2024 - Artikel oleh Zeindarin</p>
+</footer>
+
+</body>
+</html>
